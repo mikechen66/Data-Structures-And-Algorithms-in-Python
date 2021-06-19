@@ -20,10 +20,20 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 def fibonacci():
-  a = 0
-  b = 1
-  while True:             # keep going...
-    yield a               # report value, a, during this pass
-    future = a + b
-    a = b                 # this will be next value reported
-    b = future            # and subsequently this
+	a = 0
+    b = 1
+    while True:             # keep going...
+        yield a               # report value, a, during this pass
+        future = a + b
+        a = b                 # this will be next value reported
+        b = future            # and subsequently this
+
+# There is no argument for the demo.
+fibonacci()
+
+# Output: 
+
+"""
+<generator object fibonacci at 0x7fd3090fb8d0>
+"""
+
